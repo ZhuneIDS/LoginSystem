@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.min.js"
+      integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://wow.zamimg.com/modelviewer/live/viewer/viewer.min.js"></script>
+  </head>
+  <body>
+    <h1>Welcome to the Home Page</h1>
+    <p>Please authenticate with one of the following:</p>
+    <form action="https://localhost:3000/auth/bnet" method="get">
+      <button type="submit">bnet Authenticate</button>
+    </form>
+    <form action="https://localhost:3000/auth/eve" method="get">
+      <button type="submit">EVE Authenticate</button>
+    </form>
+
+    <h2>EVE Online</h2>
+    <button id="fetch-eve-assets">Fetch EVE Assets</button>
+    <div id="eve-assets"></div>
+
+    <!-- New button for fetching EVE Industry Jobs -->
+    <button id="fetch-eve-industry-jobs">Fetch EVE Industry Jobs</button>
+    <div id="eve-industry-jobs"></div>
+
+    <h2>Authenticated Accounts</h2>
+    <div id="accounts">
+      <!-- Account cards will be inserted here -->
+    </div>
+    <div id="model_3d"></div>
+    <button
+      id="view-character-appearance"
+      onclick="fetchWoWCharacterAppearance()"
+    >
+      View Character Appearance
+    </button>
+
+    <button id="view-character-data">View Character Data</button>
+    <div id="character-data"></div>
+    <h2>Character Sprite</h2>
+    <div
+      style="
+        width: 160px;
+        height: 160px;
+        background-image: url('sqlchar0.png');
+        background-position: 0px 0px;
+        background-size: 320px 320px;
+        image-rendering: pixelated;
+      "
+    ></div>
+
+    <h2>WoW Commodities</h2>
+    <button id="fetch-commodities">Fetch Multiple Commodities</button>
+    <button id="fetch-specific-commodity">Fetch Specific Commodity</button>
+    <div id="commodities-list"></div>
+    <div id="output"></div>
+
+    <!-- <script>
+      $(document).ready(function () {
+        console.log("script for 3d viewer: ");
+        const character = {
+          race: 7,
+          gender: 1,
+          skin: 4,
+          face: 0,
+          hairStyle: 5,
+          hairColor: 5,
+          facialStyle: 5,
+          items: [
+            [1, 1170],
+            [3, 4925],
+            [5, 9575],
+            [6, 25235],
+            [7, 2311],
+            [8, 21154],
+            [9, 14618],
+            [10, 9534],
+            [15, 17238],
+            [21, 20379],
+            [22, 28787],
+          ],
+        };
+        new ZamModelViewer({
+          type: "3d", // Specify the correct type
+          container: "#model_3d",
+          model: character,
+        });
+      });
+    </script> -->
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
