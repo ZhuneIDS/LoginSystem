@@ -1,3 +1,4 @@
+
 /* --- GENERAL STYLES --- */
 body {
     background-color: #0d0d0d; /* Dark background */
@@ -119,4 +120,47 @@ footer {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 15px;
+}
+
+/* --- EVE INDUSTRY JOBS LIST --- */
+#eve-industry-jobs ul {
+    list-style-type: none; /* Remove default bullet points */
+    padding: 0;
+    margin: 0;
+}
+
+#eve-industry-jobs ul li {
+    background: rgba(20, 20, 20, 0.9); /* Semi-transparent black */
+    border: 1px solid #4d4d4d; /* Metallic border */
+    border-radius: 5px; /* Rounded corners */
+    padding: 15px; /* Inner spacing */
+    margin-bottom: 15px; /* Space between list items */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.2); /* Neon glow effect */
+    transition: 0.3s ease-in-out; /* Smooth hover transition */
+}
+
+#eve-industry-jobs ul li:hover {
+    border-color: #00ffff; /* Neon cyan border on hover */
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); /* Stronger glow on hover */
+}
+
+#eve-industry-jobs ul li strong {
+    color: #00ffff; /* Neon cyan for labels */
+    font-weight: bold;
+}
+
+#eve-industry-jobs ul li span {
+    color: #d0d0d0; /* Light gray for values */
+}
+
+#eve-industry-jobs ul li span.job-done {
+    color: #ff0000; /* Red for completed jobs */
+}
+
+#eve-industry-jobs h3 {
+    color: #00ffff; /* Neon cyan for the heading */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Neon glow for text */
+    margin-bottom: 20px; /* Space below the heading */
 }
